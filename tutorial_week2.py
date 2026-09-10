@@ -15,11 +15,15 @@ def task2():
     print(f"The sum of all odd numbers from 1 to 50 is {sum}") #prints the resulting sum
 
 def task3():
-    print("Enter a letter:") #explains user what input is expected (1 letter)
+    print("Enter 1 letter:") #explains user what input is expected (1 letter)
     letter=input("") #saves the input
+    if not letter.isalpha(): #checks if the input actually is a letter
+            return #if not stops the function
+    if len(letter)!=1: #checks if there is only 1 letter
+            return #stops the function
     vowels=["a", "e", "i", "o", "u"] #list of vowels to compare to
     consonants=["b", "c", "d", "f", "g", "h", "j", "k", "l", "m", "n", "p", "q", "r", "s", "t", "v", "w", "x", "z"] #list of consonants to compare to
-    if letter=="y": #checks if the entered letter is y
+    if letter.lower()=="y": #checks if the entered letter is y
          print("Y can be both - vowel and consonant!") #informs that y can be both
     elif letter.lower() in vowels: #checks if the entered letter is in list of vowels (lower accounts for capitalization)
         print(f"{letter} is a vowel!") #if so, prints the result
