@@ -18,8 +18,10 @@ def task3():
     print("Enter 1 letter:") #explains user what input is expected (1 letter)
     letter=input("") #saves the input
     if not letter.isalpha(): #checks if the input actually is a letter
+            print("You had to enter a letter!")
             return #if not stops the function
     if len(letter)!=1: #checks if there is only 1 letter
+            print("You had to enter only 1 letter!")
             return #stops the function
     vowels=["a", "e", "i", "o", "u"] #list of vowels to compare to
     consonants=["b", "c", "d", "f", "g", "h", "j", "k", "l", "m", "n", "p", "q", "r", "s", "t", "v", "w", "x", "z"] #list of consonants to compare to
