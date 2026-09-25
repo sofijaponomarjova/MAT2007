@@ -33,7 +33,7 @@ def task1():
     else:
         print("Samples are not consistent")
 
-#task1()
+task1()
 
 patient_number=50
 initial_symptoms=100
